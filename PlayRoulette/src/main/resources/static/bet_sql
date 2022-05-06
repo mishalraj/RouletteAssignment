@@ -1,0 +1,12 @@
+CREATE TABLE bet
+(
+    bet_id       BIGINT AUTO_INCREMENT NOT NULL,
+    bet_number   INT                   NOT NULL,
+    amount       BIGINT                NOT NULL,
+    betting_time datetime              NOT NULL,
+    user         BIGINT                NOT NULL,
+    game         BIGINT                NOT NULL,
+    casino_id    BIGINT                NOT NULL,
+    bet_status   BIT(1)                NULL,
+    CONSTRAINT pk_bet PRIMARY KEY (bet_id)
+);

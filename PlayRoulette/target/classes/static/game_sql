@@ -1,0 +1,15 @@
+CREATE TABLE game
+(
+    game_id       BIGINT AUTO_INCREMENT NOT NULL,
+    game_name     VARCHAR(255)          NOT NULL,
+    start_time    datetime              NOT NULL,
+    end_time      datetime              NOT NULL,
+    thrown_number INT                   NOT NULL,
+    status        BIT(1)                NOT NULL,
+    casino_id     BIGINT                NOT NULL,
+    dealer_id     BIGINT                NOT NULL,
+    CONSTRAINT pk_game PRIMARY KEY (game_id)
+);
+
+ALTER TABLE game
+    ADD CONSTRAINT uc_game_game_name UNIQUE (game_name);

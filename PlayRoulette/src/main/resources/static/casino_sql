@@ -1,0 +1,7 @@
+CREATE TABLE casino
+(
+    casino_id      BIGINT AUTO_INCREMENT NOT NULL,
+    casino_name    VARCHAR(255)          NOT NULL,
+    balance_amount DOUBLE                NOT NULL,
+    CONSTRAINT pk_casino PRIMARY KEY (casino_id)
+);

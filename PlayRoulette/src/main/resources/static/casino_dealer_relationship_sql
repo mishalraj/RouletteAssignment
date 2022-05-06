@@ -1,0 +1,13 @@
+CREATE TABLE casino_dealer_relation_ship
+(
+    relationship_id BIGINT NOT NULL,
+    dealer_id       BIGINT NULL,
+    casino_id       BIGINT NULL,
+    CONSTRAINT pk_casinodealerrelationship PRIMARY KEY (relationship_id)
+);
+
+ALTER TABLE casino_dealer_relation_ship
+    ADD CONSTRAINT FK_CASINODEALERRELATIONSHIP_ON_CASINO FOREIGN KEY (casino_id) REFERENCES casino (casino_id);
+
+ALTER TABLE casino_dealer_relation_ship
+    ADD CONSTRAINT FK_CASINODEALERRELATIONSHIP_ON_DEALER FOREIGN KEY (dealer_id) REFERENCES dealer (dealer_id);

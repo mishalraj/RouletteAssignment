@@ -1,0 +1,6 @@
+CREATE TABLE dealer
+(
+    dealer_id   BIGINT AUTO_INCREMENT NOT NULL,
+    dealer_name VARCHAR(255)          NOT NULL,
+    CONSTRAINT pk_dealer PRIMARY KEY (dealer_id)
+);
